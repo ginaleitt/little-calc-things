@@ -1,15 +1,15 @@
 // app/about/page.js
 export default function About() {
   return (
-    <main className="min-h-screen bg-yellow-50">
+    <main className="min-h-screen bg-app-primary">
       <div className="mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-8">
-          About Quick Calc Tools
+          About Little Calc Things
         </h1>
         
         <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-md p-8">
           <p className="text-lg text-gray-700 mb-6">
-            Welcome to Quick Calc Tools! This website provides useful calculators 
+            Welcome to Little Calc Things! This website provides useful calculators 
             and tools to help solve everyday problems.
           </p>
           

@@ -14,21 +14,21 @@ export default function Navbar() {
 
   // Update the navbar JSX
 return (
-  <nav className="bg-white shadow-xl">
+  <nav className="bg-gray-800 shadow-xl">
     <div className="container mx-auto px-4">
       <div className="flex justify-between items-center h-16">
-        <Link href="/" className="font-bold text-xl text-gray-800 hover:text-blue-600">
-          Quick Calc Tools
+        <Link href="/" className="font-bold text-xl text-light">
+         Little Calc Things
         </Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <Link href="/about" className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-semibold text-gray-700">About</Link>
+          <Link href="/about" className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-semibold text-light">About</Link>
           
           <div className="relative">
             <button 
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-semibold text-gray-700"
+              className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-semibold text-light"
             >
               Tools
               <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" className="-mr-1 size-5 text-gray-400">
@@ -43,7 +43,7 @@ return (
                     <Link
                       key={index}
                       href={tool.href}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-sm text-primary hover:bg-gray-100"
                        onClick={(e) => {
                           e.stopPropagation()  // ← Add this line
                           setIsDropdownOpen(false)
@@ -61,7 +61,7 @@ return (
         {/* Mobile menu button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2"
+          className="md:hidden p-2 text-light"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
@@ -75,20 +75,20 @@ return (
       {isMobileMenuOpen && (
         <div className="md:hidden border-t">
           <div className="py-2 space-y-1">
-            <Link href="/" className="block px-4 py-2 text-gray-600 hover:bg-gray-50"
+            <Link href="/" className="block px-4 py-2 text-light hover:bg-gray-50"
               onClick={() => setIsMobileMenuOpen(false)}>
               Home
             </Link>
-            <Link href="/about" className="block px-4 py-2 text-gray-600 hover:bg-gray-50"
+            <Link href="/about" className="block px-4 py-2 text-light hover:bg-gray-50"
               onClick={() => setIsMobileMenuOpen(false)}>
               About
             </Link>
-            <div className="px-4 py-2 text-gray-600 font-medium">Tools:</div>
+            <div className="px-4 py-2 text-light font-medium">Tools:</div>
             {tools.map((tool, index) => (
               <Link
                 key={index}
                 href={tool.href}
-                className="block px-8 py-2 text-sm text-gray-600 hover:bg-gray-50"
+                className="block px-8 py-2 text-sm text-light hover:bg-gray-50"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {tool.name}

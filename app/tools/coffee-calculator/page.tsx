@@ -141,7 +141,7 @@ export default function CoffeeCalculator() {
 
 
   return (
-    <main className="min-h-screen bg-yellow-50">
+    <main className="min-h-screen bg-app-primary">
       <div className="mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
@@ -164,126 +164,130 @@ export default function CoffeeCalculator() {
               <h2 className="text-2xl font-semibold mb-6">Coffee Calculator</h2>
               
               <form onSubmit={calculateBreakEven} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Coffee Machine Price ($)
-                  </label>
-                  <input
-                    type="number"
-                    step="0.01"
-                    min="0.01"
-                    value={machinePrice}
-                    onChange={(e) => setMachinePrice(e.target.value)}
-                    className={`form-input ${errors.machinePrice ? 'border-red-500' : ''}`}
-                    placeholder="299.99"
-                    required
-                  />
-                   {errors.machinePrice && (
-                        <p className="text-red-500 text-sm mt-1">{errors.machinePrice}</p>
-                    )}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Coffee Machine Price ($)
+                    </label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      min="0.01"
+                      value={machinePrice}
+                      onChange={(e) => setMachinePrice(e.target.value)}
+                      className={`form-input ${errors.machinePrice ? 'border-red-500' : ''}`}
+                      placeholder="299.99"
+                      required
+                    />
+                    {errors.machinePrice && (
+                          <p className="text-red-500 text-sm mt-1">{errors.machinePrice}</p>
+                      )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Coffee Beans Price per Bag ($)
+                    </label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      min="0.01"
+                      value={beanPrice}
+                      onChange={(e) => setBeanPrice(e.target.value)}
+                      className={`form-input ${errors.beanPrice ? 'border-red-500' : ''}`}
+                      placeholder="12.99"
+                      required
+                    />
+                    {errors.machinePrice && (
+                          <p className="text-red-500 text-sm mt-1">{errors.beanPrice}</p>
+                      )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Cups per Bag of Beans
+                    </label>
+                    <input
+                      type="number"
+                      min="1"
+                      value={cupsPerBag}
+                      onChange={(e) => setCupsPerBag(e.target.value)}
+                      className={`form-input ${errors.cupsPerBag ? 'border-red-500' : ''}`}
+                      placeholder="20"
+                      required
+                    />
+                    {errors.machinePrice && (
+                          <p className="text-red-500 text-sm mt-1">{errors.cupsPerBag}</p>
+                      )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Cafe Coffee Price per Cup ($)
+                    </label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      min="0.01"
+                      value={cafePrice}
+                      onChange={(e) => setCafePrice(e.target.value)}
+                      className={`form-input ${errors.cafePrice ? 'border-red-500' : ''}`}
+                      placeholder="4.50"
+                      required
+                    />
+                    {errors.machinePrice && (
+                          <p className="text-red-500 text-sm mt-1">{errors.cafePrice}</p>
+                      )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Cups of Coffee per Day
+                    </label>
+                    <input
+                      type="number"
+                      step="1"
+                      min="1"
+                      value={cupsPerDay}
+                      onChange={(e) => setCupsPerDay(e.target.value)}
+                      className={`form-input ${errors.cupsPerDay ? 'border-red-500' : ''}`}
+                      placeholder="2"
+                      required
+                    />
+                    {errors.machinePrice && (
+                          <p className="text-red-500 text-sm mt-1">{errors.cupsPerDay}</p>
+                      )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Days of Coffee Drinking
+                    </label>
+                    <input
+                      type="number"
+                      step="1"
+                      min="1"
+                      value={daysCoffeeDrinking}
+                      onChange={(e) => setDaysUsage(e.target.value)}
+                      className={`form-input ${errors.daysCoffeeDrinking ? 'border-red-500' : ''}`}
+                      placeholder="200"
+                      required
+                    />
+                    {errors.machinePrice && (
+                          <p className="text-red-500 text-sm mt-1">{errors.machinePrice}</p>
+                      )}
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Coffee Beans Price per Bag ($)
-                  </label>
-                  <input
-                    type="number"
-                    step="0.01"
-                    min="0.01"
-                    value={beanPrice}
-                    onChange={(e) => setBeanPrice(e.target.value)}
-                    className={`form-input ${errors.beanPrice ? 'border-red-500' : ''}`}
-                    placeholder="12.99"
-                    required
-                  />
-                  {errors.machinePrice && (
-                        <p className="text-red-500 text-sm mt-1">{errors.beanPrice}</p>
-                    )}
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Cups per Bag of Beans
-                  </label>
-                  <input
-                    type="number"
-                    min="1"
-                    value={cupsPerBag}
-                    onChange={(e) => setCupsPerBag(e.target.value)}
-                    className={`form-input ${errors.cupsPerBag ? 'border-red-500' : ''}`}
-                    placeholder="20"
-                    required
-                  />
-                  {errors.machinePrice && (
-                        <p className="text-red-500 text-sm mt-1">{errors.cupsPerBag}</p>
-                    )}
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Cafe Coffee Price per Cup ($)
-                  </label>
-                  <input
-                    type="number"
-                    step="0.01"
-                    min="0.01"
-                    value={cafePrice}
-                    onChange={(e) => setCafePrice(e.target.value)}
-                    className={`form-input ${errors.cafePrice ? 'border-red-500' : ''}`}
-                    placeholder="4.50"
-                    required
-                  />
-                  {errors.machinePrice && (
-                        <p className="text-red-500 text-sm mt-1">{errors.cafePrice}</p>
-                    )}
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Cups of Coffee per Day
-                  </label>
-                  <input
-                    type="number"
-                    step="1"
-                    min="1"
-                    value={cupsPerDay}
-                    onChange={(e) => setCupsPerDay(e.target.value)}
-                    className={`form-input ${errors.cupsPerDay ? 'border-red-500' : ''}`}
-                    placeholder="2"
-                    required
-                  />
-                  {errors.machinePrice && (
-                        <p className="text-red-500 text-sm mt-1">{errors.cupsPerDay}</p>
-                    )}
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Days of Coffee Drinking
-                  </label>
-                  <input
-                    type="number"
-                    step="1"
-                    min="1"
-                    value={daysCoffeeDrinking}
-                    onChange={(e) => setDaysUsage(e.target.value)}
-                    className={`form-input ${errors.daysCoffeeDrinking ? 'border-red-500' : ''}`}
-                    placeholder="200"
-                    required
-                  />
-                   {errors.machinePrice && (
-                        <p className="text-red-500 text-sm mt-1">{errors.machinePrice}</p>
-                    )}
-                </div>
-
+                {/* Submit button */}
                 <button 
                     type="submit" 
                     disabled={isCalculating}
                     className={`w-full px-6 py-3 rounded-lg transition-colors duration-200 ${
                         isCalculating 
                         ? 'bg-gray-400 cursor-not-allowed' 
-                        : 'bg-blue-600 hover:bg-blue-700'
+                        : 'bg-app-darknavy hover:bg-app-darknavy-hover'
                     } text-white`}
                     >
                     {isCalculating ? (

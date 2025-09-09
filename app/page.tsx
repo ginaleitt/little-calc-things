@@ -27,12 +27,12 @@ export default function Home() {
 
 
   return (
-    <main className="min-h-screen bg-yellow-50">
+    <main className="min-h-screen bg-app-primary">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-800 mb-4">
-            Quick Calc Tools
+            Little Calc Things
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Simple, fast calculators and tools to solve everyday problems. 
@@ -67,7 +67,7 @@ export default function Home() {
 
         {/* Additional Content Section */}
         <div className="bg-white rounded-lg shadow-md p-8 text-center">
-          <h2 className="text-3xl font-semibold mb-4">Why Use Quick Calc Tools?</h2>
+          <h2 className="text-3xl font-semibold mb-4">Why Use Little Calc Things?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <div>
               <div className="text-3xl mb-3">⚡</div>
