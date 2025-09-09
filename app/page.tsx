@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { tools } from './data/tools'
+
 export const metadata = {
   title: 'Little Calc Things - Free Online Calculators',
   description: 'Simple, fast calculators for everyday problems. Coffee break-even, birthday countdown, recurring events and more.',
@@ -7,22 +9,7 @@ export const metadata = {
 }
 // app/page.js
 export default function Home() {
-  const tools = [
-      {
-        title: "Coffee Break-Even Calculator",
-        description: "Calculate when your coffee machine pays for itself vs buying coffee",
-        href: "/tools/coffee-calculator",
-        image: "☕", // We'll use emojis for now, replace with images later
-        color: "from-amber-400 to-orange-500"
-      },
-      {
-        title: "Birthday Countdown", 
-        description: "Count down to your next birthday in various time units",
-        href: "/tools/birthday-countdown",
-        image: "🎂",
-        color: "from-pink-400 to-purple-500"
-      }
-    ]
+
 
 
 

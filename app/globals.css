@@ -4,38 +4,23 @@
 
 /* Custom styles for our tools website */
 @layer base {
-  :root {
-    /* Primary colors */
-    --bg-primary: #f8fafc;
-    --bg-secondary: #f1f5f9;
-    --accent: #FF9500;
-    --accent-hover: #FF9500;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --text-light: #ccd4de;
-    
-    /* Tool-specific accent colors */
-    --darknavy: #1C1C2A;
+  .bg-app-primary { background-color: #f8fafc; }
+  .bg-app-darknavy { background-color: #1C1C2A; }
+  .bg-app-darknavy-hover { background-color: #2a2a3a; }
+  .text-primary {
+    color: #1e293b;
   }
+  .text-light {
+    color: #ccd4de;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 }
 
 @layer utilities {
-  .bg-app-primary { background-color: #f8fafc; }
-  .bg-app-darknavy { background-color: #1C1C2A; }
-  .bg-app-darknavy-hover { background-color: #2a2a3a; }
-  .text-primary {
-    color: var(--text-primary);
-  }
-  .text-light {
-    color: #ccd4de;
-  }
 
-  .stroke-light {
-    stroke: #ccd4de;
-  }
 }
 
 @layer components {
