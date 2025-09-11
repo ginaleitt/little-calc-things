@@ -199,7 +199,7 @@ export default function CoffeeCalculator() {
                       placeholder="12.99"
                       required
                     />
-                    {errors.machinePrice && (
+                    {errors.beanPrice && (
                           <p className="text-red-500 text-sm mt-1">{errors.beanPrice}</p>
                       )}
                   </div>
@@ -217,7 +217,7 @@ export default function CoffeeCalculator() {
                       placeholder="20"
                       required
                     />
-                    {errors.machinePrice && (
+                    {errors.cupsPerBag && (
                           <p className="text-red-500 text-sm mt-1">{errors.cupsPerBag}</p>
                       )}
                   </div>
@@ -236,7 +236,7 @@ export default function CoffeeCalculator() {
                       placeholder="4.50"
                       required
                     />
-                    {errors.machinePrice && (
+                    {errors.cafePrice && (
                           <p className="text-red-500 text-sm mt-1">{errors.cafePrice}</p>
                       )}
                   </div>
@@ -255,7 +255,7 @@ export default function CoffeeCalculator() {
                       placeholder="2"
                       required
                     />
-                    {errors.machinePrice && (
+                    {errors.cupsPerDay && (
                           <p className="text-red-500 text-sm mt-1">{errors.cupsPerDay}</p>
                       )}
                   </div>
@@ -274,8 +274,8 @@ export default function CoffeeCalculator() {
                       placeholder="200"
                       required
                     />
-                    {errors.machinePrice && (
-                          <p className="text-red-500 text-sm mt-1">{errors.machinePrice}</p>
+                    {errors.daysCoffeeDrinking && (
+                          <p className="text-red-500 text-sm mt-1">{errors.daysCoffeeDrinking}</p>
                       )}
                   </div>
                 </div>

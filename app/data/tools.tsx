@@ -20,5 +20,12 @@ export const tools = [
         href: "/tools/birthday-countdown",
         image: "🎂",
         color: "from-pink-400 to-purple-500"
+      },
+      {
+        title: "Subscription Calculator", 
+        description: "Calculate the total worth of a subscription by comparing cost vs usage",
+        href: "/tools/subscription-calculator",
+        image: "💵",
+        color: "from-emerald-600 to-sky-200"
       }
     ]
