@@ -4,6 +4,6 @@ export const metadata = {
   description: 'Calculate how long it takes for your coffee machine to pay for itself compared to buying coffee from cafes.',
 }
 
-export default function CoffeeCalculatorLayout({ children }) {
+export default function CoffeeCalculatorLayout({ children }: { children: React.ReactNode }) {
   return children
 }

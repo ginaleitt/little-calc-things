@@ -4,6 +4,6 @@ export const metadata = {
   description: 'Split two time durations by equal intervals (e.g. divide two days into 4 chunks)',
 }
 
-export default function TimeSplitterLayout({ children }) {
+export default function TimeSplitterLayout({ children }: { children: React.ReactNode }) {
   return children
 }

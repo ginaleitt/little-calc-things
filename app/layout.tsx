@@ -11,7 +11,7 @@ export const metadata = {
   description: 'Useful calculators and tools for everyday problems',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>

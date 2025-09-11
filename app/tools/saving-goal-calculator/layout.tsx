@@ -4,6 +4,6 @@ export const metadata = {
   description: 'Calculate how much you need to save by each interval to reach your saving goals. Optionally include compounding interest',
 }
 
-export default function SavingGoalCalculatorLayout({ children }) {
+export default function SavingGoalCalculatorLayout({ children }: { children: React.ReactNode }) {
   return children
 }
