@@ -27,5 +27,12 @@ export const tools = [
         href: "/tools/subscription-calculator",
         image: "💵",
         color: "from-emerald-600 to-sky-200"
+      },
+      {
+        title: "Time Splitter", 
+        description: "Split two time durations by equal intervals",
+        href: "/tools/time-splitter",
+        image: "🕔",
+        color: "from-teal-400 to-yellow-200"
       }
     ]
