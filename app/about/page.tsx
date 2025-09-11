@@ -1,3 +1,4 @@
+import { tools } from '../data/tools'
 // app/about/page.js
 export default function About() {
   return (
@@ -14,12 +15,11 @@ export default function About() {
           </p>
           
           <h2 className="text-2xl font-semibold mb-4">Our Tools</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Coffee Break-Even Calculator - Find out when your coffee machine pays for itself</li>
-            <li>Birthday Countdown - Count down to your special day</li>
-            <li>Recurring Event Finder - Generate dates for recurring events</li>
+          {tools.map((tool, index) => (
+          <ul  key={index} className="list-disc list-inside text-gray-700 space-y-2">
+            <li> {tool.title} - {tool.description}</li>
           </ul>
-          
+          ))}
           <h2 className="text-2xl font-semibold mb-4 mt-8">Built With</h2>
           <p className="text-gray-700">
             This site is built with Next.js 14, Tailwind CSS, and deployed on Vercel.
