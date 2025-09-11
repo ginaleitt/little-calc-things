@@ -62,11 +62,7 @@ const currentYear = new Date().getFullYear();
           <p className="text-gray-400 text-sm">
             &copy; {currentYear} Quick Calc Tools. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Privacy Policy
-            </Link>
-          </div>
+          
         </div>
       </div>
     </footer>

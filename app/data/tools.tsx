@@ -34,5 +34,12 @@ export const tools = [
         href: "/tools/time-splitter",
         image: "🕔",
         color: "from-teal-400 to-yellow-200"
+      },
+      {
+        title: "Savings Goal Calculator", 
+        description: "Calculate how much to save regularly to reach your financial goal with compound interest",
+        href: "/tools/savings-goal-calculator",
+        image: "💰",
+        color: "from-green-400 to-blue-500"
       }
     ]
