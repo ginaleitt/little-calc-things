@@ -190,7 +190,9 @@ export default function BirthdayCalculator() {
                         max={maxDate}
                       required
                     />
-                    
+                    {errors.birthdayPastToday  && (
+                          <p className="text-red-500 text-sm mt-1">{errors.birthdayPastToday }</p>
+                      )}
                   </div>
                 </div>
                   
