@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 // At the top of your component, define the shape
 interface CalculationResults {
   homeCostPerCup: string;
@@ -133,11 +133,6 @@ export default function CoffeeCalculator() {
         setIsCalculating(false)
     }
 
-    // Auto-calculate when component loads
-    // useEffect (also calls the calculation)
-    useEffect(() => {
-    performCalculation()  // No fake event needed!
-    }, [])
 
 
   return (

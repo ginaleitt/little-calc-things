@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 // At the top of your component, define the shape of your errors
 interface FormErrors {
    subscriptionCost?: string;
@@ -20,7 +20,7 @@ export default function SubscriptionCalculator() {
     const [isCalculating, setIsCalculating] = useState(false)
     const [errors, setErrors] = useState<FormErrors>({})
     //state for results
-    const [normalizedSubscriptionCostPerUsage, setNormalizedSubscriptionCostPerUsage] = useState('0');
+    const [normalizedSubscriptionCostPerUsage, setNormalizedSubscriptionCostPerUsage] = useState('');
 
     // Array of frequency options - makes it easy to add/remove options
     const frequencyOptions = [
@@ -105,11 +105,6 @@ export default function SubscriptionCalculator() {
         setIsCalculating(false)
     }
 
-    // Auto-calculate when component loads
-    // useEffect (also calls the calculation)
-    useEffect(() => {
-    performCalculation() 
-    }, [])
 
 
   return (

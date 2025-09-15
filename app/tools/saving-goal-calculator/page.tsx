@@ -483,7 +483,7 @@ export default function SubscriptionCalculator() {
                             />
                             <YAxis tickFormatter={(value) => `$${value.toFixed(0)}`} />
                             <Tooltip 
-                                formatter={(value, name) => [`$${value.toFixed(2)}`, name]}
+                                formatter={(value, name) => [`$${value}`, name]}
                                 labelFormatter={(value) => `Date: ${new Date(value).toLocaleDateString()}`}
                             />
                             <Legend />

@@ -157,7 +157,7 @@ export default function BirthdayCalculator() {
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4">Birthday Countdown Calculator</h1>
           <p className="text-gray-600 max-w-4xl mx-auto">
-            Find out how many days are left until your next birthday! Just enter your birth date. See the countdown in days, weeks, and months and how old you'll be turning in years, months, weeks, and days!
+            Find out how many days are left until your next birthday! Just enter your birth date. See the countdown in days, weeks, and months and how old you&apos;ll be turning in years, months, weeks, and days!
           </p>
         </div>
 

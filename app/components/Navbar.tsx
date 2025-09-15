@@ -3,14 +3,12 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { tools } from '../data/tools'
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const tools = [
-    { name: 'Coffee Break-Even Calculator', href: '/tools/coffee-calculator' },
-    { name: 'Birthday Countdown', href: '/tools/birthday-countdown' }
-  ]
+  
 
   // Update the navbar JSX
 return (
@@ -49,7 +47,7 @@ return (
                           setIsDropdownOpen(false)
                         }}
                     >
-                      {tool.name}
+                      {tool.title}
                     </Link>
                   ))}
                 </div>
@@ -91,7 +89,7 @@ return (
                 className="block px-8 py-2 text-sm text-light hover:bg-gray-50"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {tool.name}
+                {tool.title}
               </Link>
             ))}
           </div>
