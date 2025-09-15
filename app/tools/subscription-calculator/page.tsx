@@ -101,7 +101,7 @@ export default function SubscriptionCalculator() {
             return
         }
         await new Promise(resolve => setTimeout(resolve, 500))
-        const result = performCalculation()
+        performCalculation()
         setIsCalculating(false)
     }
 

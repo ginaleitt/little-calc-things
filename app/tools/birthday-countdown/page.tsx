@@ -87,7 +87,7 @@ export default function BirthdayCalculator() {
 
 
         // Find next birthday
-        let nextBirthday = new Date(currentYear, birthDate.getMonth(), birthDate.getDate())
+        const nextBirthday = new Date(currentYear, birthDate.getMonth(), birthDate.getDate())
         if (nextBirthday < now) {
             nextBirthday.setFullYear(currentYear + 1)
         } // If birthday hasn't occurred yet this year, set to next year
@@ -141,7 +141,6 @@ export default function BirthdayCalculator() {
         e.preventDefault()
         setErrors({})
         // Validation 
-        const newErrors: FormErrors = {} 
 
         const result = performDateCalculation()
         if (result.error) {

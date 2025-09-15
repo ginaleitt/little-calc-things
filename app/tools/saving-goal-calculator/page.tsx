@@ -84,7 +84,6 @@ export default function SubscriptionCalculator() {
         const periodsPerYear = getFrequencyNumber(savingInterval);
         const daysPerPeriod = 365.25 / periodsPerYear;
         const compoundFreq = getFrequencyNumber(compoundFrequency);
-        const daysPerCompound = 365.25 / compoundFreq;
         
         let currentAmount = initialSaving;
         let totalContributed = 0;
@@ -98,9 +97,6 @@ export default function SubscriptionCalculator() {
                 currentAmount += contributeAmount;
             }
             
-            // Apply interest only when we hit a compound period
-            const compoundPeriodsPassed = Math.floor(currentDay / daysPerCompound);
-            const lastCompoundDay = compoundPeriodsPassed * daysPerCompound;
             
             // Simple approximation: apply all accumulated interest
             if (interestRate > 0) {
