@@ -41,5 +41,12 @@ export const tools = [
         href: "/tools/saving-goal-calculator",
         image: "💰",
         color: "from-green-400 to-blue-500"
+      },
+      {
+        title: "Game Idea Generator", 
+        description: "Get a video game or a board game idea from mechanisms, themes, limitations and more",
+        href: "/tools/game-idea-generator",
+        image: "🎲",
+        color: "from-purple-300 to-indigo-600"
       }
     ]
