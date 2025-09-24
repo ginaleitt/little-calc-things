@@ -48,5 +48,12 @@ export const tools = [
         href: "/tools/game-idea-generator",
         image: "🎲",
         color: "from-purple-300 to-indigo-600"
+      },
+      {
+        title: "Next Skil Generator", 
+        description: "Discover what skills should you learn next and a starting project",
+        href: "/tools/next-skill-generator",
+        image: "🧠",
+        color: "from-fuchsia-600 to-rose-300"
       }
     ]

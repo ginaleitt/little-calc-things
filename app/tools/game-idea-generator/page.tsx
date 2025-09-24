@@ -7,10 +7,7 @@ import { useState } from 'react';
 import { games, GameEntry, Games } from '../../data/games';
 
 type GameType = 'board' | 'video';
-// At the top of your component, define the shape of your errors
 
-
-// app/tools/subscription-calculator/page.js
 export default function GameIdeaGenerator() {
     
     const [gameType, setGameType] = useState('board');
