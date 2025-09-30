@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react';
-
+import Image from 'next/image'
 
 
 export default function ArtIdeaGenerator() {
@@ -211,11 +211,15 @@ export default function ArtIdeaGenerator() {
                       <div className="grid grid-cols-2 gap-4">
                         {result.images.map((img, index) => (
                           <div key={index}>
-                            <img
-                              src={img}
-                              alt={`Inspiration ${index + 1}`}
-                              className="w-full h-48 object-cover rounded-lg"
-                            />
+                            <div key={index} className="relative w-full h-48">
+                              <Image
+                                src={img}
+                                alt={`Inspiration ${index + 1}`}
+                                fill
+                                className="rounded-lg object-cover"
+                                unoptimized  // If img is an external URL
+                              />
+                            </div>
                             {result.attributions && result.attributions[index] && (
                               <p className="text-xs text-gray-600 mt-2">
                                 Photo by{' '}

@@ -2,6 +2,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image'
 import { books } from '../../data/books';
 
 // Type definitions
@@ -72,9 +73,7 @@ export default function BookRecommender() {
         })
     }
 
-    const generateBook = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        
+    const handleGenerateBook = () => {
         if (selectedCategories.length === 0) {
             alert('Please select at least one category');
             return;
@@ -82,11 +81,8 @@ export default function BookRecommender() {
         
         const minLength = parseInt(selectedMinLength) || 0;
         const maxLength = parseInt(selectedMaxLength) || Infinity;
-        
-        // Pick random category from selected
         const randomCategory = selectedCategories[Math.floor(Math.random() * selectedCategories.length)];
         
-        // Filter books by category and page count
         const filteredBooks = books.filter(book => 
             book.category === randomCategory && 
             book.page_count >= minLength && 
@@ -98,10 +94,14 @@ export default function BookRecommender() {
             return;
         }
         
-        // Pick random book
         const randomBook = filteredBooks[Math.floor(Math.random() * filteredBooks.length)];
         setGeneratedBook(randomBook);
-    }
+    };
+
+    const generateBook = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        handleGenerateBook();
+    };
 
     return (
         <main className="min-h-screen bg-app-primary">
@@ -208,10 +208,13 @@ export default function BookRecommender() {
                                         {/* Book Cover */}
                                         {generatedBook.cover_image && (
                                             <div className="flex-shrink-0">
-                                                <img 
+                                                <Image 
                                                     src={generatedBook.cover_image} 
-                                                    alt={generatedBook.title}
-                                                    className="w-48 h-auto rounded-lg shadow-md"
+                                                    alt={`Book cover of ${generatedBook.title} by ${generatedBook.author}`}
+                                                    width={192}  // w-48 = 192px
+                                                    height={288} // roughly 3:4 aspect ratio for book covers
+                                                    className="rounded-lg shadow-md"
+                                                    unoptimized  // Important: external URLs need this
                                                 />
                                             </div>
                                         )}
@@ -245,10 +248,7 @@ export default function BookRecommender() {
                                             </a>
                                             
                                             <button 
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    generateBook(e as any);
-                                                }}
+                                                onClick={handleGenerateBook}
                                                 className="ml-4 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                                             >
                                                 Find Another Book
