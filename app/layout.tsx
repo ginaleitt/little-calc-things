@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Little Calc Things',
   description: 'Useful calculators and tools for everyday problems',
+  verification: {
+    google: 'Fg9lVsPHY5mbfKNx9DoWpxX-naamWHJjHnhODyIrqZE"', // Replace with YOUR actual code
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
