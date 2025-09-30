@@ -55,5 +55,19 @@ export const tools = [
         href: "/tools/next-skill-generator",
         image: "🧠",
         color: "from-fuchsia-600 to-rose-300"
-      }
+      },
+      {
+        title: "Next Book Generator",
+        description: "Find your next great read by filtering books by genre and page count",
+        href: "/tools/next-book-generator",
+        image: "📚",
+        color: "from-blue-400 to-indigo-500"
+      },
+      {
+        title: "Art Idea Generator",
+        description: "Discover your next art idea based on images, color scheme, and a sentence",
+        href: "/tools/art-idea-generator",
+        image: "🎨",
+        color: "from-rose-400 to-pink-500"
+      },
     ]
