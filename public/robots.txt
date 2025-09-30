@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://little-calc-things.vercel.app/sitemap.xml
