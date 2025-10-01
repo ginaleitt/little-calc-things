@@ -72,26 +72,26 @@ async function fetchUnsplashImages(theme) {
 
     const data = await response.json()
     
-    // Extract image URLs and attribution data
+    // Extract image URLs, attribution data, AND download locations
     const images = data.results.map(photo => photo.urls.regular)
     
-    // Create array of attribution objects with proper links
     const attributions = data.results.map(photo => ({
       photographerName: photo.user.name,
       photographerUrl: `${photo.user.links.html}?utm_source=art_idea_generator&utm_medium=referral`,
-      unsplashUrl: `https://unsplash.com/?utm_source=art_idea_generator&utm_medium=referral`
+      unsplashUrl: `https://unsplash.com/?utm_source=art_idea_generator&utm_medium=referral`,
+      downloadLocation: photo.links.download_location  // Add this
     }))
     
     return {
       images,
-      attributions  // Changed from 'attribution' to 'attributions' (array)
+      attributions
     }
 
   } catch (error) {
     console.error('Unsplash fetch error:', error)
     return {
       images: [],
-      attributions: []  // Changed to array
+      attributions: []
     }
   }
 }

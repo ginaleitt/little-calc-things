@@ -204,49 +204,59 @@ export default function ArtIdeaGenerator() {
 
                   {/* Images (when you add Unsplash) */}
                   {result.images && result.images.length > 0 && (
-                    <div className="border p-4 rounded">
-                      <div className="flex justify-between items-center mb-2">
-                        <h3 className="font-bold">Inspiration Images:</h3>
-                      </div>
-                      <div className="grid grid-cols-2 gap-4">
-                        {result.images.map((img, index) => (
-                          <div key={index}>
-                            <div key={index} className="relative w-full h-48">
-                              <Image
-                                src={img}
-                                alt={`Inspiration ${index + 1}`}
-                                fill
-                                className="rounded-lg object-cover"
-                                unoptimized  // If img is an external URL
-                              />
-                            </div>
-                            {result.attributions && result.attributions[index] && (
-                              <p className="text-xs text-gray-600 mt-2">
-                                Photo by{' '}
-                                <a 
-                                  href={result.attributions[index].photographerUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="underline hover:text-gray-800"
-                                >
-                                  {result.attributions[index].photographerName}
-                                </a>
-                                {' '}on{' '}
-                                <a 
-                                  href={result.attributions[index].unsplashUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="underline hover:text-gray-800"
-                                >
-                                  Unsplash
-                                </a>
-                              </p>
-                            )}
-                          </div>
-                        ))}
-                      </div>
+                  <div className="border p-4 rounded">
+                    <div className="flex justify-between items-center mb-2">
+                      <h3 className="font-bold">Inspiration Images:</h3>
                     </div>
-                  )}
+                    <div className="grid grid-cols-2 gap-4">
+                      {result.images.map((img, index) => (
+                        <div key={index}>
+                          <img
+                            src={img}
+                            alt={`Inspiration ${index + 1}`}
+                            className="w-full h-48 object-cover rounded-lg"
+                            onLoad={() => {
+                              // Trigger download when image loads
+                              if (result.attributions && result.attributions[index]) {
+                                fetch('/api/trigger-download', {
+                                  method: 'POST',
+                                  headers: {
+                                    'Content-Type': 'application/json'
+                                  },
+                                  body: JSON.stringify({
+                                    downloadLocation: result.attributions[index].downloadLocation
+                                  })
+                                }).catch(err => console.error('Download trigger failed:', err))
+                              }
+                            }}
+                          />
+                          {result.attributions && result.attributions[index] && (
+                            <p className="text-xs text-gray-600 mt-2">
+                              Photo by{' '}
+                              <a 
+                                href={result.attributions[index].photographerUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-gray-800"
+                              >
+                                {result.attributions[index].photographerName}
+                              </a>
+                              {' '}on{' '}
+                              <a 
+                                href={result.attributions[index].unsplashUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-gray-800"
+                              >
+                                Unsplash
+                              </a>
+                            </p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 </div>
               )}
             </div>
