@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /data/
+Sitemap: https://little-calc-things.vercel.app/sitemap.xml
