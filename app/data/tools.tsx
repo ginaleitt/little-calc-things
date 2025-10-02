@@ -73,7 +73,7 @@ export const tools = [
       {
         title: "Budget Allocation Calculator",
         description: "Figure out what you can afford and distribute your budget.",
-        href: "/tools/art-idea-generator",
+        href: "/tools/budget-allocation-calculator",
         image: "💳",
         color: "from-violet-600 to-indigo-600"
       },
