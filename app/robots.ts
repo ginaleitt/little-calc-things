@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://little-calc-things.vercel.app/sitemap.xml' // Update with your actual domain
+  const baseUrl = 'https://little-calc-things.vercel.app/' // Update with your actual domain
 
   return {
     rules: {
