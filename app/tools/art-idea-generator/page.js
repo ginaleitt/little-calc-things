@@ -211,7 +211,7 @@ export default function ArtIdeaGenerator() {
                     <div className="grid grid-cols-2 gap-4">
                       {result.images.map((img, index) => (
                         <div key={index}>
-                          <img
+                          <Image
                             src={img}
                             alt={`Inspiration ${index + 1}`}
                             className="w-full h-48 object-cover rounded-lg"

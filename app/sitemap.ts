@@ -42,7 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // New tools
     {
-      url: `${baseUrl}/tools/skill-generator`,
+      url: `${baseUrl}/tools/next-skill-generator`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tools/budget-allocation-calculator`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

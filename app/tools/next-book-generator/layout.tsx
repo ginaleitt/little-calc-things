@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://yourdomain.com/book-recommender',
+    canonical: 'https://yourdomain.com/tools/next-book-recommender',
   },
 }
 

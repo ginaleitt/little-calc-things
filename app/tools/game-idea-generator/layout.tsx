@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Game Idea Generator - Creative Game Design Tool',
     description: 'Generate unique game ideas with random mechanisms, themes, and settings',
     type: 'website',
-    url: 'https://little-calc-things.vercel.app/game-idea-generator',
+    url: 'https://little-calc-things.vercel.app/tools/game-idea-generator',
     siteName: 'Little Calc Things',
   },
   twitter: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://little-calc-things.vercel.app/game-idea-generator',
+    canonical: 'https://little-calc-things.vercel.app/tools/game-idea-generator',
   },
 }
 

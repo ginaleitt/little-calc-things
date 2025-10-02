@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Next Skill Generator - Discover What Skills to Learn',
     description: 'Get personalized skill recommendations and starter project ideas for your next learning journey',
     type: 'website',
-    url: 'https://little-calc-things.vercel.app/next-skill-generator',
+    url: 'https://little-calc-things.vercel.app/tools/next-skill-generator',
     siteName: 'Little Calc Things',
   },
   twitter: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://little-calc-things.vercel.app/next-skill-generator',
+    canonical: 'https://little-calc-things.vercel.app/tools/next-skill-generator',
   },
 }
 

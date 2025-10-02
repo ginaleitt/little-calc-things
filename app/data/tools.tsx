@@ -70,4 +70,11 @@ export const tools = [
         image: "🎨",
         color: "from-rose-400 to-pink-500"
       },
+      {
+        title: "Budget Allocation Calculator",
+        description: "Figure out what you can afford and distribute your budget.",
+        href: "/tools/art-idea-generator",
+        image: "💳",
+        color: "from-violet-600 to-indigo-600"
+      },
     ]

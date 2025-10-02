@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Birthday Countdown Timer - Days Until Birthday',
     description: 'Count down to your birthday in days, sleeps, weekends, and more!',
     type: 'website',
-    url: 'https://little-calc-things.vercel.app/birthday-countdown',
+    url: 'https://little-calc-things.vercel.app/tools/birthday-countdown',
     siteName: 'Little Calc Things',
   },
   twitter: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://little-calc-things.vercel.app/birthday-countdown',
+    canonical: 'https://little-calc-things.vercel.app/tools/birthday-countdown',
   },
 }
 

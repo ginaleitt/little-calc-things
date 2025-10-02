@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'Art Idea Generator - Creative Art Prompts & Inspiration',
     description: 'Generate art ideas with random images, color schemes, and creative prompts',
     type: 'website',
-    url: 'https://little-calc-things.vercel.app/art-idea-generator',
+    url: 'https://little-calc-things.vercel.app/tools/art-idea-generator',
     siteName: 'Little Calc Things',
   },
   twitter: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://little-calc-things.vercel.app/art-idea-generator',
+    canonical: 'https://little-calc-things.vercel.app/tools/art-idea-generator',
   },
 }
 

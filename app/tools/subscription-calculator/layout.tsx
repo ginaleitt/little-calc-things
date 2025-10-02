@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Subscription Cost Calculator - Calculate Cost Per Use',
     description: 'Discover if your subscription usage justifies the cost - gym memberships, streaming, and more',
     type: 'website',
-    url: 'https://little-calc-things.vercel.app/subscription-calculator',
+    url: 'https://little-calc-things.vercel.app/tools/subscription-calculator',
     siteName: 'Little Calc Things',
   },
   twitter: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://little-calc-things.vercel.app/subscription-calculator',
+    canonical: 'https://little-calc-things.vercel.app/tools/subscription-calculator',
   },
 }
 

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Time Duration Splitter - Divide Time Into Equal Intervals',
     description: 'Split two time durations by equal intervals - perfect for scheduling and time blocking',
     type: 'website',
-    url: 'https://little-calc-things.vercel.app/time-splitter',
+    url: 'https://little-calc-things.vercel.app/tools/time-splitter',
     siteName: 'Little Calc Things',
   },
   twitter: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://little-calc-things.vercel.app/time-splitter',
+    canonical: 'https://little-calc-things.vercel.app/tools/time-splitter',
   },
 }
 

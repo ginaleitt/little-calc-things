@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Saving Goal Calculator - Plan Your Financial Goals',
     description: 'Calculate how much to save by each interval to reach your goals with compound interest',
     type: 'website',
-    url: 'https://little-calc-things.vercel.app/saving-goal-calculator',
+    url: 'https://little-calc-things.vercel.app/tools/saving-goal-calculator',
     siteName: 'Little Calc Things',
   },
   twitter: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://little-calc-things.vercel.app/saving-goal-calculator',
+    canonical: 'https://little-calc-things.vercel.app/tools/saving-goal-calculator',
   },
 }
 

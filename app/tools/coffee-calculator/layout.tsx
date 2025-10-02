@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Coffee Machine Break-Even Calculator',
     description: 'Find out when your coffee machine pays for itself compared to buying from cafes',
     type: 'website',
-    url: 'https://little-calc-things.vercel.app/coffee-calculator',
+    url: 'https://little-calc-things.vercel.app/tools/coffee-calculator',
     siteName: 'Little Calc Things',
   },
   twitter: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://little-calc-things.vercel.app/coffee-calculator',
+    canonical: 'https://little-calc-things.vercel.app/tools/coffee-calculator',
   },
 }
 
