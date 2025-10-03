@@ -176,24 +176,6 @@ export default function SubscriptionCalculator() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Usage Amount ({usageFrequencyType.toLowerCase()}) Per {usageFrequency}
-                    </label>
-                    <input
-                      type="number"
-                      min="1"
-                      value={usageAmount }
-                      onChange={(e) => setUsageAmount(e.target.value)}
-                      className={`form-input ${errors.usageAmount  ? 'border-red-500' : ''}`}
-                      placeholder="20"
-                      required
-                    />
-                    {errors.usageAmount  && (
-                          <p className="text-red-500 text-sm mt-1">{errors.usageAmount }</p>
-                      )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Usage Frequency
                     </label>
                     <select
@@ -226,6 +208,26 @@ export default function SubscriptionCalculator() {
                     </select>
                     
                     </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Usage Amount ({usageFrequencyType.toLowerCase()}) Per {usageFrequency}
+                    </label>
+                    <input
+                      type="number"
+                      min="1"
+                      value={usageAmount }
+                      onChange={(e) => setUsageAmount(e.target.value)}
+                      className={`form-input ${errors.usageAmount  ? 'border-red-500' : ''}`}
+                      placeholder="20"
+                      required
+                    />
+                    {errors.usageAmount  && (
+                          <p className="text-red-500 text-sm mt-1">{errors.usageAmount }</p>
+                      )}
+                  </div>
+
+                  
                 </div>
 
                 {/* Submit button */}

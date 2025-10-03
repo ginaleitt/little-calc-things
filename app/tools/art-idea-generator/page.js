@@ -214,9 +214,10 @@ export default function ArtIdeaGenerator() {
                           <Image
                             src={img}
                             alt={`Inspiration ${index + 1}`}
+                            width={1080}
+                            height={720}
                             className="w-full h-48 object-cover rounded-lg"
                             onLoad={() => {
-                              // Trigger download when image loads
                               if (result.attributions && result.attributions[index]) {
                                 fetch('/api/trigger-download', {
                                   method: 'POST',
