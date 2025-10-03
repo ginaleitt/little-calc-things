@@ -217,19 +217,6 @@ export default function ArtIdeaGenerator() {
                             width={1080}
                             height={720}
                             className="w-full h-48 object-cover rounded-lg"
-                            onLoad={() => {
-                              if (result.attributions && result.attributions[index]) {
-                                fetch('/api/trigger-download', {
-                                  method: 'POST',
-                                  headers: {
-                                    'Content-Type': 'application/json'
-                                  },
-                                  body: JSON.stringify({
-                                    downloadLocation: result.attributions[index].downloadLocation
-                                  })
-                                }).catch(err => console.error('Download trigger failed:', err))
-                              }
-                            }}
                           />
                           {result.attributions && result.attributions[index] && (
                             <p className="text-xs text-gray-600 mt-2">
