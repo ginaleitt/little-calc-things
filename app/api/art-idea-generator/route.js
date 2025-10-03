@@ -58,7 +58,7 @@ export async function POST(request) {
 async function fetchUnsplashImages(theme) {
   try {
     // Generate a random page number (Unsplash has many pages of results)
-    const randomPage = Math.floor(Math.random() * 10) + 1  // Pages 1-10
+    const randomPage = Math.floor(Math.random() * 20) + 1  // Pages 1-20
     
     const response = await fetch(
       `https://api.unsplash.com/search/photos?query=${theme}&per_page=4&orientation=landscape&page=${randomPage}`,
