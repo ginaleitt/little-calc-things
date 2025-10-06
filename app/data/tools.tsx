@@ -77,4 +77,11 @@ export const tools = [
         image: "💳",
         color: "from-violet-600 to-indigo-600"
       },
+      {
+        title: "Patent Generator",
+        description: "Randomly generate three patents, so that you can think about combining those three ideas.",
+        href: "/tools/patent-generator",
+        image: "🔍",
+        color: "from-yellow-400 to-rose-300"
+      },
     ]
