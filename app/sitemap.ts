@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/tools/next-book-recommender`,
+      url: `${baseUrl}/tools/next-book-generator`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
